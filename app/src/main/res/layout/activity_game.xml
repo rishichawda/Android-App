@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.minimalgames.tictactoe.GameActivity">
+
+    <LinearLayout
+        android:id="@+id/gamepopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:elevation="11dp"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingLeft="43dp"
+        android:paddingRight="43dp"
+        android:paddingTop="25dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/WinnerMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="casual"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_green_light"
+            android:fontFamily="casual"
+            android:onClick="play"
+            android:text="Play Again"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="340dp"
+        android:layout_height="380dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/board"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="0"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:onClick="mark"
+            android:tag="0" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:onClick="mark"
+            android:tag="1" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_row="1"
+            android:onClick="mark"
+            android:tag="5" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_row="1"
+            android:onClick="mark"
+            android:tag="4" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="0"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_row="1"
+            android:onClick="mark"
+            android:tag="3" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_row="2"
+            android:onClick="mark"
+            android:tag="8" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="0"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_row="2"
+            android:onClick="mark"
+            android:tag="6" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:onClick="mark"
+            android:tag="2" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_row="2"
+            android:onClick="mark"
+            android:tag="7" />
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
